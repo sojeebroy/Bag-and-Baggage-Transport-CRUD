@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "create";
+}
+
+<form action="" method="post">
+    <h2>Create your Account</h2>
+    Full Name:<input type="text" name="manager_name" class="form-control" />
+    @Html.ValidationMessage("manager_name", new { @class = "text-danger" })<br />
+    Password:<input type="password" name="password" class="form-control" />
+    @Html.ValidationMessage("password", new { @class = "text-danger" })<br />
+    Email:<input type="email" name="email" class="form-control" />
+    @Html.ValidationMessage("email", new { @class = "text-danger" })<br />
+    Phone:<input type="text" name="phone" class="form-control" />
+    @Html.ValidationMessage("phone", new { @class = "text-danger" })<br />
+    Address:<input type="text" name="address" class="form-control" />
+    @Html.ValidationMessage("address", new { @class = "text-danger" })<br />
+
+    <input type="submit" name="submit" value="Signup" class="btn btn-primary" />
+</form>
+

@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "edit";
+}
+
+<div class="d-flex justify-content-center mt-5">
+
+    <form action="" method="post">
+        <h2>Edit your Account</h2>
+        Full Name:<input type="text" name="driver_name" value="@Model.driver_name" class="form-control" />
+        @Html.ValidationMessage("driver_name", new { @class = "text-danger" })<br />       
+        Date of birth:<input type="text" name="dob" value="@Model.dob" class="form-control" />
+        @Html.ValidationMessage("dob", new { @class = "text-danger" })<br />
+        Phone:<input type="number" name="phone" value="@Model.phone" class="form-control" />
+        @Html.ValidationMessage("phone", new { @class = "text-danger" })<br />
+        License Number:<input type="number" name="license_no" value="@Model.license_no" class="form-control" />
+        @Html.ValidationMessage("license_no", new { @class = "text-danger" })<br />
+        Nid Number:<input type="number" name="driver_nid" value="@Model.driver_nid" class="form-control" />
+        @Html.ValidationMessage("driver_nid", new { @class = "text-danger" })<br />
+        Vechile Number:<input type="text" name="vechile_no" value="@Model.vechile_no" class="form-control" />
+        @Html.ValidationMessage("vechile_no", new { @class = "text-danger" })<br />
+        Vechile type:<input type="text" name="vechile_type" value="@Model.vechile_type" class="form-control" />
+        @Html.ValidationMessage("vechile_type", new { @class = "text-danger" })<br />
+        Address:<input type="text" name="address" value="@Model.address" class="form-control" />
+        @Html.ValidationMessage("address", new { @class = "text-danger" })<br />
+
+        <input type="submit" name="Edit" value="Edit" class="btn btn-primary" />
+    </form>
+</div>
+
+

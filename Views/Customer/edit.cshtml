@@ -1,0 +1,47 @@
+﻿
+@{
+
+    ViewBag.Title = "edit";
+}
+<link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+
+
+<div class="d-flex justify-content-center">
+    <form action="../customer/edit/@Model.user_id" method="post">
+        <h5>Customer ID: @Model.customer_id</h5>
+        <h5>User ID: @Model.user_id</h5>
+        @{
+            //var dateofbirth = DateTime.Model.dob;
+        }
+
+
+        Customer name:<input type="text" value="@(Model == null ? "" : Model.customer_name)" name="customer_name" class="form-control" />
+        @Html.ValidationMessage("customer_name", new { @class = "text-danger" })<br />
+        Date of birth:<input type="text" id="datepicker" name="dob" value="@(ViewBag.date)" class="form-control" />
+        @Html.ValidationMessage("dob", new { @class = "text-danger" })<br />
+        Address:<input type="text" name="address" value="@(Model == null ? "" : Model.address)" class="form-control" />
+        @Html.ValidationMessage("address", new { @class = "text-danger" })<br />
+        Phone:<input type="number" name="phone" value="@(Model == null ? "" : Model.phone)" class="form-control" />
+        @Html.ValidationMessage("phone", new { @class = "text-danger" })<br />
+        Password:<input type="password" name="password" value="@(ViewBag.password)" class="form-control" />
+        @Html.ValidationMessage("phone", new { @class = "text-danger" })<br />
+
+        <input type="submit" name="submit" class="btn btn-primary" />
+    </form>
+</div>
+<h1>@ViewBag.date</h1>
+
+
+@section scripts{
+    <script src="~/Scripts/jquery-ui-1.13.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({
+                changeMonth: true,
+                changeYear: true
+            });
+        });
+    </script>
+}
+
+

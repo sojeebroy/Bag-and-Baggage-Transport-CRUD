@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "test";
+}
+
+
+
+<h2>
+    test
+</h2>
+
+<form action="" method="post">
+    Email:<input type="email" name="email" class="form-control" />
+    @Html.ValidationMessage("email", new { @class = "text-danger" })<br />
+    <input type="submit" name="submit" value="submit" class="btn btn-primary" />
+</form>
+

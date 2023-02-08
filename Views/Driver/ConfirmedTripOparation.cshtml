@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "ConfirmedTripOparation";
+}
+
+<h2>Confirmed Trips</h2>
+
+<table align="center" class="table tab-content">
+    <tr>
+        <th>Trip Number</th>
+        <th>Start Location Name</th>
+        <th>Destination</th>
+        <th>Vechile Type</th>
+        <th>Price</th>
+        <th>Labour Number</th>
+        <th>Time</th>
+        <th>Status</th>
+        <th>Product Discription</th>
+        <th>Labour Id</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@p.trip_id</td>
+            <td>@p.start_location</td>
+            <td>@p.end_location</td>
+            <td>@p.vechile_type</td>
+            <td>@p.price</td>
+            <td>@p.labour_number</td>
+            <td>@p.date_time</td>
+            <td>@p.status</td>
+            <td>@p.product_description</td>
+            <td>@p.labour_id</td>
+            <td><a href="../Driver/DeletePost/@p.trip_id"><button class="btn btn-danger">Delete</button></a></td>
+
+        </tr>
+    }
+</table>
+<br />
+<br />

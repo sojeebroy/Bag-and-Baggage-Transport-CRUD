@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "booking";
+}
+
+<h2>booking</h2>
+<section>
+   
+        <p class="text-center fs-5">Trip start: @ViewBag.start_location </p>
+        
+        <p class="text-center fs-5">Trip End: @ViewBag.end_location </p>
+        <div class="d-flex justify-content-center mt-5">
+
+            <form action="" method="post">
+                <h2>Booking Oparetion</h2>
+                Vechile Type:<input type="text" name="vechile_type" class="form-control" />
+                @Html.ValidationMessage("vechile_type", new { @class = "text-danger" })<br />
+                Number of Labour:<input type="text" name="labour_number" class="form-control" />
+                @Html.ValidationMessage("labour_number", new { @class = "text-danger" })<br />
+                Date and time:<input type="date" name="date_time" class="form-control" />
+                @Html.ValidationMessage("date_time", new { @class = "text-danger" })<br />
+                Product description:<input type="text" name="product_description" class="form-control" />
+                @Html.ValidationMessage("product_description", new { @class = "text-danger" })<br />
+                <input type="submit" name="submit" class="btn btn-primary" />
+            </form>
+        </div>
+    
+</section>
+
